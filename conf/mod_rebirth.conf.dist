@@ -1,0 +1,76 @@
+[worldserver]
+
+########################################
+# mod-rebirth configuration
+########################################
+#
+# A rebirth / prestige-reset system. A real player at the server level cap can
+# talk to the Rebirth NPC and be reborn: level drops back to 1 (Death Knights to
+# 55), talents and skills reset, but gear, gold, bags, bank, mounts, recipes and
+# quests are KEPT. Each rebirth grants a permanent, stacking XP bonus and a batch
+# of Rebirth Tokens spent at the same NPC's token shop (table `rebirth_shop`).
+#
+# The NPC (creature_template entry below) and all tables are created
+# automatically at startup. Spawn the NPC once with:  .npc add <NpcEntry>
+#
+
+#
+#    Rebirth.Enable
+#        Master on/off switch. 0 = module loads but does nothing (NPC gossip
+#        refuses, no XP bonus, no schema/NPC creation).
+#        Default: 1
+#
+Rebirth.Enable = 1
+
+#
+#    Rebirth.NpcEntry
+#        creature_template entry used for the Rebirth NPC. The row (and its
+#        display model - a spirit-healer look) is created/updated at startup.
+#        Spawn it with ".npc add <this value>".
+#        Default: 800100
+#
+Rebirth.NpcEntry = 800100
+
+#
+#    Rebirth.RequiredLevel
+#        Level a character must reach to be reborn. 0 = use the server's max
+#        player level (MaxPlayerLevel in worldserver.conf).
+#        Default: 0
+#
+Rebirth.RequiredLevel = 0
+
+#
+#    Rebirth.TokensPerRebirth
+#        Rebirth Tokens granted per rebirth (currency for the token shop).
+#        Default: 5
+#
+Rebirth.TokensPerRebirth = 5
+
+#
+#    Rebirth.XpBonusPctPerRebirth
+#        Permanent XP bonus added per rebirth, applied to every XP gain. At 10
+#        the 3rd rebirth gives +30% XP. Stacks additively with itself.
+#        Default: 10
+#
+Rebirth.XpBonusPctPerRebirth = 10
+
+#
+#    Rebirth.MaxXpBonusPct
+#        Optional cap on the TOTAL permanent XP bonus (percent). 0 = uncapped.
+#        Default: 0
+#
+Rebirth.MaxXpBonusPct = 0
+
+#
+#    Rebirth.MaxRebirths
+#        Optional cap on how often a character can be reborn. 0 = unlimited.
+#        Default: 0
+#
+Rebirth.MaxRebirths = 0
+
+#
+#    Rebirth.AnnounceWorld
+#        1 = broadcast a server-wide message each time someone is reborn.
+#        Default: 1
+#
+Rebirth.AnnounceWorld = 1
