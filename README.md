@@ -1,5 +1,10 @@
 # mod-rebirth
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=mod-rebirth)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=mod-rebirth)
+<!-- links:end -->
+
 A **rebirth / prestige-reset** module for the mod-playerbots AzerothCore fork (WotLK 3.3.5a).
 
 A real player who has reached the server level cap can talk to the **Rebirth NPC**
